@@ -1,4 +1,9 @@
 $(function () {
+  const params = new Proxy(new URLSearchParams(window.location.search), {
+    get: (searchParams, prop) => searchParams.get(prop),
+  });
+  let sender = params.sender;
+
   if (!$(".envelope").hasClass("open")) {
     $(".envelope").click(function () {
       $(this).removeClass("new").addClass("open");
@@ -28,7 +33,9 @@ $(function () {
 
     fetch(
       "https://invitation-result.azurewebsites.net/api/invite?code=R_4UrPJ3tkqYEPfLOcau-jQh0S9OyJ63xJQn1puwhdl4AzFu2RkgHg==&result=" +
-        yesValue
+        yesValue +
+        "&sender=" +
+        sender
     )
       .then(function (response) {
         return response.json();
