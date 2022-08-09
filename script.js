@@ -16,8 +16,28 @@ $(function () {
   $(".btn").click(function (event) {
     event.preventDefault();
 
+    let yesValue = $("#yes-value").is(":checked");
+    let noValue = $("#no-value").is(":checked");
+
+    if (!yesValue && !noValue) {
+      alert("Please select an option");
+      return;
+    }
+
     $(this).closest(".envelope").removeClass("open").addClass("send");
 
-    //Put jQuery code for submitting the form with AJAX here.
+    fetch(
+      "https://invitation-result.azurewebsites.net/api/invite?code=R_4UrPJ3tkqYEPfLOcau-jQh0S9OyJ63xJQn1puwhdl4AzFu2RkgHg==&result=" +
+        yesValue
+    )
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        console.log(data);
+      })
+      .catch(function () {
+        console.log("Something went wrong");
+      });
   });
 });
