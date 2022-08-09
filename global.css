@@ -186,6 +186,10 @@ body {
   font-weight: bold;
   margin: 0;
 }
+
+.envelope .front .mailme img {
+  width: 60px;
+}
 .envelope .front .mailme p:first-child {
   font-size: 50px;
   line-height: 50px;
