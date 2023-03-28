@@ -1,88 +1,53 @@
 <!DOCTYPE html>
 <html lang="hu">
-  <head>
-    <link rel="stylesheet" href="global.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
-      crossorigin="anonymous"
-    ></script>
-    <script src="script.js"></script>
-    <link href="image/favicon.ico" rel="icon" type="image/x-icon" />
-    <title>Super invite</title>
-  </head>
-  <body>
-    <div class="envelope new">
-      <div class="front">
-        <div class="stamp"></div>
-        <div class="mailme">
-          <p>It is time to suit up!</p>
-          <img src="image/tie.svg" alt="tie" />
-        </div>
-      </div>
-      <div class="back">
-        <div class="letter">
-          <div class="mailform">
-            <h1 class="d-flex justify-content-center">
-              Would you be my best man?
-            </h1>
-            <div class="d-flex justify-content-between mx-4">
-              <div id="yes" class="form-check d-flex align-items-center">
-                <input
-                  class="form-check-input cursor-pointer"
-                  type="radio"
-                  name="flexRadioDefault"
-                  id="yes-value"
-                />
-                <label
-                  class="form-check-label ms-2 cursor-pointer"
-                  for="yes-value"
-                >
-                  <h2 class="m-0">Yes</h2>
-                </label>
-              </div>
-              <div id="no" class="form-check d-flex align-items-center">
-                <input
-                  class="form-check-input cursor-pointer"
-                  type="radio"
-                  name="flexRadioDefault"
-                  id="no-value"
-                />
-                <label
-                  class="form-check-label ms-2 cursor-pointer"
-                  for="no-value"
-                >
-                  <h2 class="m-0">No</h2>
-                </label>
-              </div>
-            </div>
-            <div class="col text-center">
-              <button class="btn btn-info">Send</button>
-            </div>
-          </div>
-        </div>
-        <div class="flap left-flap"></div>
-        <div class="flap right-flap"></div>
-        <div class="flap bottom-flap"></div>
-        <div class="flap top-flap"></div>
-      </div>
-    </div>
-    <div class="notification">
-      <div>
-        <div>
-          <p>Thank You!</p>
-        </div>
-      </div>
-    </div>
-  </body>
-  <div class="pyro d-none">
-    <div class="before"></div>
-    <div class="after"></div>
-  </div>
+	<head>
+		<link rel="stylesheet" href="global.css" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+			integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+			crossorigin="anonymous"
+		></script>
+		<script src="script.js"></script>
+		<link href="image/favicon.ico" rel="icon" type="image/x-icon" />
+		<title>Megh&#237;v&#243;</title>
+	</head>
+	<body>
+		<div class="envelope new pulsing">
+			<div class="front">
+				<div class="stamp"></div>
+				<div class="mailme">
+					<p class="tc-container"></p>
+					<!--<img src="image/tie.svg" alt="tie" />-->
+				</div>
+			</div>
+			<div class="back d-flex justify-content-center">
+				<div class="letter" style="display: none">
+					<div class="letter-top"></div>
+				</div>
+				<div class="flap left-flap"></div>
+				<div class="flap right-flap"></div>
+				<div class="flap bottom-flap"></div>
+				<div class="flap top-flap"></div>
+			</div>
+			<!--<div style="width:500px; height:200px; background:black; position:absolute;"></div>-->
+		</div>
+
+		<div class="notification">
+			<div>
+				<div>
+					<p>Thank You!</p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<div class="pyro d-none">
+		<div class="before"></div>
+		<div class="after"></div>
+	</div>
 </html>
